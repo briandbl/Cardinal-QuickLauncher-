@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Setbox</class>
+ <widget class="QMainWindow" name="Setbox">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>人物设置</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="BasicSet_tab">
+       <attribute name="title">
+        <string>基本参数</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QGroupBox" name="Show_groupBox">
+          <property name="title">
+           <string>显示</string>
+          </property>
+          <widget class="QLabel" name="ImgSize_text">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>31</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>缩放</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="ImgSize_control">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>20</y>
+             <width>191</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="pageStep">
+            <number>0</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="sliderPosition">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="ImgSize_text_percent">
+           <property name="geometry">
+            <rect>
+             <x>240</x>
+             <y>20</y>
+             <width>31</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="TopWindow_checkBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="text">
+            <string>窗口置顶</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="WindowIconbox_checkBox">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>50</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>显示图标栏图标</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="SetBox_Go_with_Person_checkBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>181</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>设置面板与人物位置绑定</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="ImagePackageInfo_groupBox">
+          <property name="title">
+           <string>图包参数</string>
+          </property>
+          <widget class="QLineEdit" name="Name_show">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>20</y>
+             <width>241</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Name_text">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>21</y>
+             <width>31</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>名称</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Introduction_text">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>31</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>介绍</string>
+           </property>
+          </widget>
+          <widget class="QPlainTextEdit" name="Introduction_show">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>50</y>
+             <width>241</width>
+             <height>141</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Animation_tab">
+       <attribute name="title">
+        <string>动画参数</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="AnimationValueSet_groupBox">
+          <property name="title">
+           <string>参数设置类</string>
+          </property>
+          <widget class="QLineEdit" name="Skip_frame_lineEdit">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>20</y>
+             <width>31</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string>更改单帧休眠时间来跳帧（此处填写的是原fps单帧休眠时间的倍数）（不要得寸进尺）</string>
+           </property>
+           <property name="statusTip">
+            <string/>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{qproperty-alignment:AlignHCenter;}
+</string>
+           </property>
+           <property name="text">
+            <string>1</string>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Skip_frame_label">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>31</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>跳帧</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Skip_frame_pushButton">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>20</y>
+             <width>91</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>适配最佳参数</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="AnimationChoicegroupBox">
+          <property name="title">
+           <string>选择项目</string>
+          </property>
+          <widget class="QCheckBox" name="Animation_Mirror_checkBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>51</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>镜像</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Animation_Cache_checkBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>71</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>图像缓存</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Debug_tab">
+       <attribute name="title">
+        <string>调试器</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QTabWidget" name="Debug_tabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="Debug_Animation_tab">
+           <attribute name="title">
+            <string>动画</string>
+           </attribute>
+           <widget class="QListWidget" name="Debug_Animation_Actions_listWidget">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>231</width>
+              <height>81</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="Debug_Animation_GetActions_pushButton">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>360</y>
+              <width>61</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>获取数据</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="Debug_Animation_PlayAction_pushButton">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>360</y>
+              <width>81</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>播放选中动画</string>
+            </property>
+           </widget>
+           <widget class="QGroupBox" name="Debug_Animation_CoreInfo_groupBox">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>231</width>
+              <height>91</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>核心参数[只读]</string>
+            </property>
+            <widget class="QLabel" name="Debug_Animation_CoreInfo_Usualyplay_label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>61</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>常态性动作</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Debug_Animation_CoreInfo_Usualyplay_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>20</y>
+               <width>131</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{qproperty-alignment:AlignHCenter;}</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Debug_Animation_CoreInfo_ImageSize_label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>40</y>
+               <width>71</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>渲染区域尺寸</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Debug_Animation_CoreInfo_ImageSize_x_lineEdit">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>40</y>
+               <width>51</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::StrongFocus</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{qproperty-alignment:AlignHCenter;}</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Debug_Animation_CoreInfo_ImageSize_y_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>170</x>
+               <y>40</y>
+               <width>51</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{qproperty-alignment:AlignHCenter;}</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Debug_Animation_CoreInfo_ImageSize_connect_label">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>40</y>
+               <width>16</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>×</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Debug_Animation_CoreInfo_Change_label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>60</y>
+               <width>71</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>缩放系数</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Debug_Animation_CoreInfo_Change_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>60</y>
+               <width>131</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{qproperty-alignment:AlignHCenter;}</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="Animation_Information_groupBox">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>200</y>
+              <width>231</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>动画信息[选择后显示][只读]</string>
+            </property>
+            <widget class="QLabel" name="Animation_Information_path_label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>31</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>路径</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Animation_Information_path_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>20</y>
+               <width>181</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Animation_Information_front_label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>40</y>
+               <width>81</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>文件名称前导</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Animation_Information_end_label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>60</y>
+               <width>81</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>文件名称后导</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Animation_Information_front_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>40</y>
+               <width>131</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Animation_Information_end_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>60</y>
+               <width>131</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Animation_Information_start_label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>80</y>
+               <width>61</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>文件起始帧</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Animation_Information_start_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>80</y>
+               <width>131</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Animation_Information_last_label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>100</y>
+               <width>61</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>文件终止帧</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Animation_Information_last_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>100</y>
+               <width>131</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Animation_Information_fps_label">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>120</y>
+               <width>71</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>动画设定fps</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="Animation_Information_fps_lineEdit">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>120</y>
+               <width>131</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QPushButton" name="Debug_Animation_Set_usually_play_pushButton">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>360</y>
+              <width>91</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设为常态性动作</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="Debug_sound_tab">
+           <attribute name="title">
+            <string>语音</string>
+           </attribute>
+           <widget class="QLabel" name="label">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>111</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string># 敬请期待</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::MarkdownText</enum>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>菜单</string>
+    </property>
+    <addaction name="SaveConfig_action"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="SaveConfig_action">
+   <property name="text">
+    <string>保存配置</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ImgSize_control</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>Setbox</receiver>
+   <slot>ImgSize_control_valueChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>-8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>TopWindow_checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Setbox</receiver>
+   <slot>TopWindow_checkBox_valueChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>-4</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>WindowIconbox_checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Setbox</receiver>
+   <slot>WindowIconbox_checkBox_valueChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>212</x>
+     <y>-20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SetBox_Go_with_Person_checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Setbox</receiver>
+   <slot>SetBox_Go_with_Person_checkBox_valueChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>144</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>112</x>
+     <y>-11</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Skip_frame_lineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Setbox</receiver>
+   <slot>Change_Skip_frame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>30</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Animation_Mirror_checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Setbox</receiver>
+   <slot>Mirror_Image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>345</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Skip_frame_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Setbox</receiver>
+   <slot>Skip_frame_GetBestConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>142</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>491</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Debug_Animation_GetActions_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Setbox</receiver>
+   <slot>Debug_Animation_GetActions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>58</x>
+     <y>463</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Debug_Animation_Actions_listWidget</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>Setbox</receiver>
+   <slot>Animation_Information_Get()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>215</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>796</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Debug_Animation_PlayAction_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Setbox</receiver>
+   <slot>Animation_Test_Play()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>169</x>
+     <y>453</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>798</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Animation_Cache_checkBox</sender>
+   <signal>clicked()</signal>
+   <receiver>Setbox</receiver>
+   <slot>Cache_Image()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Debug_Animation_Set_usually_play_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Setbox</receiver>
+   <slot>SetUsuallyPlay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>195</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>496</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>ImgSize_control_valueChange()</slot>
+  <slot>TopWindow_checkBox_valueChange()</slot>
+  <slot>WindowIconbox_checkBox_valueChange()</slot>
+  <slot>SetBox_Go_with_Person_checkBox_valueChange()</slot>
+  <slot>Change_Skip_frame()</slot>
+  <slot>Mirror_Image()</slot>
+  <slot>Skip_frame_GetBestConfig()</slot>
+  <slot>Debug_Animation_GetActions()</slot>
+  <slot>Animation_Information_Get()</slot>
+  <slot>Animation_Test_Play()</slot>
+  <slot>Cache_Image()</slot>
+  <slot>SetUsuallyPlay()</slot>
+ </slots>
+</ui>
